@@ -112,7 +112,9 @@ function DomeGallery({
   openedImageHeight = '350px',
   imageBorderRadius = '30px',
   openedImageBorderRadius = '30px',
-  grayscale = true
+  grayscale = true,
+  enableImageViewer = true,
+  imageFit = 'cover'
 }) {
   const rootRef = useRef(null);
   const mainRef = useRef(null);
@@ -480,10 +482,11 @@ function DomeGallery({
 
   const onTileClick = useCallback(
     (event) => {
+      if (!enableImageViewer) return;
       if (draggingRef.current || movedRef.current || performance.now() - lastDragEndAt.current < 80) return;
       openItemFromElement(event.currentTarget);
     },
-    [openItemFromElement]
+    [enableImageViewer, openItemFromElement]
   );
 
   const handlePointerEnter = () => {
@@ -512,7 +515,9 @@ function DomeGallery({
         '--overlay-blur-color': overlayBlurColor,
         '--tile-radius': imageBorderRadius,
         '--enlarge-radius': openedImageBorderRadius,
-        '--image-filter': grayscale ? 'grayscale(1)' : 'none'
+        '--image-filter': grayscale ? 'grayscale(1)' : 'none',
+        '--image-fit': imageFit,
+        '--tile-cursor': enableImageViewer ? 'pointer' : 'grab'
       }}
     >
       <main ref={mainRef} className="sphere-main">
@@ -534,7 +539,13 @@ function DomeGallery({
                   '--item-size-y': item.sizeY
                 }}
               >
-                <div className="item__image" role="button" tabIndex={0} aria-label={item.alt || 'Open image'} onClick={onTileClick}>
+                <div
+                  className="item__image"
+                  role={enableImageViewer ? 'button' : undefined}
+                  tabIndex={enableImageViewer ? 0 : undefined}
+                  aria-label={enableImageViewer ? item.alt || 'Open image' : item.alt}
+                  onClick={enableImageViewer ? onTileClick : undefined}
+                >
                   <img src={item.src} draggable={false} alt={item.alt} />
                 </div>
               </div>
