@@ -96,7 +96,7 @@ body {
 .landing-page main,
 .landing-page footer {
     position: relative;
-    z-index: 2;
+    z-index: 5;
 }
 
 .landing-skeleton {
