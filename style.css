@@ -58,7 +58,7 @@ body {
     inset: 0;
     z-index: 0;
     overflow: hidden;
-    pointer-events: auto;
+    pointer-events: none;
 }
 
 .landing-pixel-trail {
@@ -95,6 +95,7 @@ body {
 
 .landing-page main,
 .landing-page footer {
+    position: relative;
     z-index: 2;
 }
 
