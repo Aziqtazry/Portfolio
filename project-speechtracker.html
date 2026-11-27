@@ -7,23 +7,19 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="stylesheet" href="src/portfolio-writeup.css">
 </head>
-<body>
-    <nav class="navbar">
-        <div class="logo">Portfolio</div>
-        <ul class="nav-links">
-            <li><a href="index.html">Back to Home</a></li>
-        </ul>
-    </nav>
+<body class="portfolio-writeup">
+    <header class="writeup-topbar"><a class="portfolio-brand" href="./"><span>Aziq <em>FM</em></span></a></header>
 
+    <main>
     <section class="project-detail-hero">
-        <a href="index.html" class="back-link"><i class="fas fa-arrow-left"></i> Back to Portfolio</a>
+        <a href="./?fm=90.8#projects" class="portfolio-back">← Back to case study</a>
         <h1>Speech Tracker</h1>
         <p class="project-subtitle">A low-powered IoT device that tracks speech patterns and notifies parents via WhatsApp</p>
         <div class="project-hero-image">
-            <img src="assets/Speech%20Tracker.png" alt="Speech Tracker Device">
+            <img src="assets/Speech%20Tracker.png" alt="Speech Tracker Device" width="1129" height="777" fetchpriority="high">
         </div>
     </section>
 
@@ -31,15 +27,15 @@
         <div class="project-details-container">
             <div class="project-content">
 
-                <div class="project-content-section animate-on-scroll">
-                    <h2><i class="fas fa-info-circle"></i> Project Overview</h2>
+                <div class="project-content-section">
+                    <h2>Project Overview</h2>
                     <p>
                         Speech Tracker is a tool designed to assist in speech therapy and progress monitoring. It records sessions, analyzes speech patterns using machine learning, and provides visual feedback to users in real-time.
                     </p>
                 </div>
 
-                <div class="project-content-section animate-on-scroll">
-                    <h2><i class="fas fa-code"></i> Technologies Used</h2>
+                <div class="project-content-section">
+                    <h2>Technologies Used</h2>
                     <div class="tech-tags">
                         <span class="tech-tag">Arduino</span>
                         <span class="tech-tag">C/C++</span>
@@ -49,15 +45,15 @@
                     </div>
                 </div>
 
-                <div class="project-content-section animate-on-scroll">
-                    <h2><i class="fas fa-book"></i> Project Context</h2>
+                <div class="project-content-section">
+                    <h2>Project Context</h2>
                     <p>
                         This project was built as my final year project in Electronic Engineering to help parents in monitoring their children's speech development. The device is designed to be low-cost and easy to use, making it accessible for families without access to regular speech therapy sessions.
                     </p>
                 </div>
 
-                <div class="project-content-section animate-on-scroll">
-                    <h2><i class="fas fa-star"></i> Key Features</h2>
+                <div class="project-content-section">
+                    <h2>Key Features</h2>
                     <ul class="feature-list">
                         <li><strong>Audio Recording & Analysis:</strong> Captures audio and processes it in the module that has been trained.</li>
                         <li><strong>Real-time Feedback:</strong> Visualizes speech clarity and volume instantly.</li>
@@ -66,29 +62,21 @@
                     </ul>
                 </div>
 
-                <div class="project-content-section animate-on-scroll">
-                    <h2><i class="fas fa-lightbulb"></i> What I Learned</h2>
+                <div class="project-content-section">
+                    <h2>What I Learned</h2>
                     <p>
                         I learned how to deploy machine learning models on a lightweight device and integrate it with sensors for real-time data collection. I also gained experience in IoT communication protocols to send notifications effectively.
                     </p>
                 </div>
 
-                <div class="project-content-section animate-on-scroll">
-                    <h2><i class="fas fa-project-diagram"></i> System Diagram</h2>
-                    <div class="system-diagram">
-                        <i class="fas fa-drafting-compass" style="font-size: 2.5rem; color: var(--primary-light); margin-bottom: 1rem; display: block;"></i>
-                        <p style="color: var(--text-light); font-style: italic;">System diagram will be updated soon.</p>
-                    </div>
-                </div>
-
             </div>
         </div>
     </section>
+    </main>
 
     <footer>
         <p>&copy; 2026 Aziqtazry Faidzli. All Rights Reserved.</p>
     </footer>
 
-    <script type="module" src="script.js"></script>
 </body>
 </html>

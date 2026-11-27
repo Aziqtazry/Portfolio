@@ -1,0 +1,18 @@
+.capabilities .section-heading h2 {
+  color: inherit;
+  font: 600 clamp(2.6rem, 6vw, 4.5rem)/1.08 Georgia, serif;
+  letter-spacing: -.055em;
+}
+.capability-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: clamp(2rem, 6vw, 5rem); }
+.capability-list article { border-top: 1px solid var(--border-color); padding: 1.45rem 0; }
+.capability-list h3 { font: 600 clamp(1.35rem, 2.4vw, 1.85rem)/1.2 Georgia, serif; letter-spacing: -.03em; }
+.capability-list p { max-width: 55ch; margin-top: .65rem; }
+.capability-tools, .engineering-tools { color: var(--text-light); }
+.capability-projects { display: flex; flex-wrap: wrap; gap: 1rem; margin-top: .7rem; }
+.capability-projects a { color: inherit; text-underline-offset: .2em; font-weight: 650; }
+.capability-projects a:hover { color: #ffdc8c; }
+.engineering-tools { border-top: 1px solid var(--border-color); padding: 1.4rem 0; }
+.capabilities .cert-badge { max-width: 1120px; margin-bottom: 0; }
+@media (max-width: 700px) {
+  .capability-list { grid-template-columns: 1fr; }
+}

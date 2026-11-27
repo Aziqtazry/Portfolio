@@ -1,4 +1,4 @@
-import { projects } from '../data/projects.js';
+import { projects, frequencies } from '../data/projects.js';
 import ShinyText from './effects/ShinyText.jsx';
 import SpotlightCard from './effects/SpotlightCard.jsx';
 
@@ -11,7 +11,7 @@ function Projects() {
       </div>
 
       <div className="projects-grid">
-        {projects.map((project) => (
+        {projects.map((project, index) => (
           <SpotlightCard as="article" className="project-card animate-on-scroll" key={project.name}>
             {project.image ? (
               <div className="project-image">
@@ -19,14 +19,14 @@ function Projects() {
               </div>
             ) : (
               <div className="project-image project-placeholder">
-                <i className={project.placeholderIcon}></i>
+                <span>{project.name}</span>
               </div>
             )}
 
             <div className="project-info">
               <h3>{project.name}</h3>
-              <p>{project.description}</p>
-              <a href={project.href} className="btn-small">
+              {project.description && <p>{project.description}</p>}
+              <a href={`${import.meta.env.BASE_URL}?fm=${frequencies[index]}#projects`} className="btn-small">
                 View Project <i className="fas fa-arrow-right"></i>
               </a>
             </div>

@@ -1,0 +1,55 @@
+.app-shell.landing-page {
+  --paper: #f5f2e9;
+  --ink: #1d2c26;
+  --rust: #b53b22;
+  --rule: #c9c9b9;
+  background: var(--paper);
+}
+.app-shell.landing-page .navbar, .app-shell.landing-page .navbar.scrolled {
+  padding-inline: max(5%, calc((100% - 1190px) / 2));
+  background: var(--paper);
+  border-bottom: 1px solid var(--rule);
+  box-shadow: none;
+}
+.navbar .logo { display: inline-flex; align-items: center; gap: .65rem; }
+.navbar dialog.contact-dialog { position: fixed; inset: 0; margin: auto; color: #f5f2e9; max-width: calc(100vw - 2rem); }
+.navbar dialog::backdrop { background: #10251dd9; }
+.landing-page .navbar .logo { color: var(--ink); letter-spacing: -.045em; font-size: 1.15rem; }
+.station-mark { display: inline-flex; align-items: center; justify-content: center; gap: 2px; height: 29px; width: 35px; border-radius: 6px; background: #26493c; }
+.station-mark i { width: 2px; height: 7px; background: #ffdc8c; border-radius: 3px; }
+.station-mark i:nth-child(even) { height: 16px; }
+.station-mark i:nth-child(3) { height: 22px; }
+.landing-page .navbar .nav-links a { color: #425249; border-radius: 0; background: transparent; }
+.landing-page .navbar .nav-links a:is(:hover,.active) { color: var(--rust); text-decoration: underline; text-underline-offset: .44em; }
+.station-contact { padding: .52rem 1rem; border: 1px solid currentColor; border-radius: 6px; color: inherit; background: transparent; cursor: pointer; font: inherit; font-size: .9rem; font-weight: 650; }
+.landing-page .station-contact, .landing-page .navbar .hamburger { color: var(--ink); border-color: #8a9488; background: transparent; }
+.station-home { color: var(--ink); background: var(--paper); scroll-margin-top: 74px; }
+.station-home :is(input,button) { font: inherit; }
+.station-home button { cursor: pointer; }
+.station-home :is(a,button,input,[tabindex]):focus-visible, .landing-page .navbar :is(a,button):focus-visible { outline: 3px solid #ba561a; outline-offset: 3px; }
+.station-width { width: min(90%, 1190px); margin-inline: auto; }
+.landing-page #projects,.landing-page #skills { scroll-margin-top: 86px; }
+.landing-page .landing-projects-intro,.landing-page #skills,.landing-page footer { color: #f4f1db; background: #20372d; }
+.landing-page .landing-projects-copy .eyebrow { color: #d2dabb; }
+.landing-page .landing-projects-intro { min-height: 0; padding: 4rem 0 3rem; }
+.landing-page .landing-projects-copy h2 { color: #f1eddc; font: 600 clamp(2.5rem,6vw,4.5rem)/1.05 Georgia,serif; letter-spacing: -.055em; }
+.landing-page #skills { --card-bg: #2b4137; --border-color: #596d5c; --text-light: #c3cebb; --bg-light: #2b4137; }
+.landing-page footer p,.landing-page footer a { color: #d1dac8; }
+@media(max-width: 768px) {
+  .landing-page .navbar .nav-links { background: #f5f2e9; border-color: var(--rule); }
+}
+@media(max-width: 660px) {
+  .landing-page .navbar { gap: .4rem; }
+  .landing-page .navbar .logo { font-size: 1rem; gap: .4rem; }
+  .station-contact { padding: .45rem .55rem; }
+}
+@media(max-width: 390px) {
+  .station-mark { width: 26px; }
+  .landing-page .navbar .logo { font-size: .9rem; line-height: 1.2; }
+  .landing-page .station-contact { white-space: nowrap; font-size: .8rem; }
+  .station-width { width: 92%; }
+}
+@media(prefers-reduced-motion: reduce) {
+  html:focus-within, html { scroll-behavior: auto; }
+  .readout strong,.rotary-dial i,.dial-needle,.project-broadcast { transition: none; animation: none; }
+}
