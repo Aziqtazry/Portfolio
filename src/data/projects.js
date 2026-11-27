@@ -14,7 +14,7 @@ export const projects = [
       'Large text and high-contrast controls make the mobile interface easier for older patients to use.'
     ],
     gallery: [{ src: `${baseUrl}assets/Mymeds-flowchart.png`, alt: 'MyMeds system flowchart' }],
-    contribution: 'Aziq set up Firebase Authentication and Firestore, implemented persistent alerts with Firebase Cloud Messaging, designed the Flutter interface, and tested and deployed the app.',
+    contribution: 'I set up Firebase Authentication and Firestore, implemented persistent alerts with Firebase Cloud Messaging, designed the Flutter interface, and tested and deployed the app.',
     description: 'A mobile medication reminder application built with Flutter and Firebase.',
     image: `${baseUrl}assets/MyMeds.png`,
     imageAlt: 'MyMeds opening screen with a medication reminder bell',
@@ -32,7 +32,7 @@ export const projects = [
       'The device records audio and processes it locally with a trained model that classifies speech patterns.',
       'Children receive immediate visual feedback on clarity and volume. Parents receive progress updates through WhatsApp.'
     ],
-    contribution: 'Through this final-year project, Aziq learned to deploy a model on a lightweight device, connect sensors for real-time data, and send updates using IoT communication protocols.',
+    contribution: 'Through this final-year project, I learned to deploy a model on a lightweight device, connect sensors for real-time data, and send updates using IoT communication protocols.',
     description: 'A low-powered device that tracks targeted words and notifies the user through WhatsApp.',
     image: `${baseUrl}assets/Speech%20Tracker.png`,
     imageAlt: 'Inside the Speech Tracker device, showing its speaker, voice recognition module and ESP32-S3',
@@ -117,7 +117,7 @@ export const projects = [
     category: 'Workflow automation',
     story: 'Shimadzu’s production team can trace a daily total back to the jobs that produced it. The dashboard replaces the previous Power BI reporting workflow. A separate inspection screen pairs camera playback with a checklist and event log.',
     terms: ['power bi', 'automation', 'inspection', 'manual entry'],
-    description: 'Aziq built the Shimadzu dashboard, automated manual entry and inspection, and replaced the previous Power BI workflow.',
+    description: 'I built the Shimadzu dashboard, automated manual entry and inspection, and replaced the previous Power BI workflow.',
     features: [
       'Filter imported work logs by date and station to compare production cycles, running time and idle time. Cycle counts and recorded quantities are shown separately.',
       'Follow the station timeline to individual job records, then export a report for the selected work.',

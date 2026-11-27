@@ -10,7 +10,7 @@
 .portfolio-writeup main { border: 1px solid var(--line); border-radius: .875rem; background: var(--surface); }
 .project-detail-hero {
     padding: clamp(1rem, 4vw, 2.75rem);
-    background: linear-gradient(115deg, #282f1d, #455436);
+    background: var(--hero-surface);
     border-radius: .875rem .875rem 0 0;
 }
 .project-detail-hero h1 {
@@ -19,8 +19,8 @@
     letter-spacing: -.07em;
     overflow-wrap: anywhere;
 }
-.project-subtitle { margin-top: .5rem; color: #e1e6d7; }
-.project-hero-image { margin-top: 1.2rem; padding: .5rem; border-radius: .6rem; background: #151910; }
+.project-subtitle { margin-top: .5rem; color: var(--ink); }
+.project-hero-image { margin-top: 1.2rem; padding: .5rem; border-radius: .6rem; background: var(--shell); }
 .project-hero-image img { margin: auto; width: auto; height: auto; max-height: 26rem; border-radius: .3rem; object-fit: contain; }
 .project-content { display: grid; gap: 1rem; padding: clamp(1rem, 4vw, 2.75rem); }
 .project-content-section { padding-top: 1rem; border-top: 1px solid var(--line); }
